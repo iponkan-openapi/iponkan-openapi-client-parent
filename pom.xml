@@ -10,11 +10,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>iponkan-openapi-api</module>
+        <module>iponkan-api</module>
     </modules>
 
     <properties>
         <spring-boot.version>2.2.0.RELEASE</spring-boot.version>
         <swagger.version>1.5.20</swagger.version>
+        <validation-api.version>2.0.1</validation-api.version>
     </properties>
 
     <dependencyManagement>
@@ -31,7 +33,12 @@
                 <artifactId>swagger-annotations</artifactId>
                 <version>${swagger.version}</version>
             </dependency>
+            <dependency>
+                <groupId>jakarta.validation</groupId>
+                <artifactId>jakarta.validation-api</artifactId>
+                <version>${validation-api.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
 </project>

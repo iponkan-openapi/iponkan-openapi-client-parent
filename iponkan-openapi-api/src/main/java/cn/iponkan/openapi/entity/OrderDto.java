@@ -1,6 +1,9 @@
 package cn.iponkan.openapi.entity;
 
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * 订单
@@ -22,6 +25,8 @@ public class OrderDto {
      */
     private String source;
 
+    @ApiModelProperty("订单uuid")
+    @NotNull
     public String getId() {
         return id;
     }
@@ -30,6 +35,8 @@ public class OrderDto {
         this.id = id;
     }
 
+    @ApiModelProperty("单号")
+    @NotNull
     public String getNumber() {
         return number;
     }
@@ -38,6 +45,7 @@ public class OrderDto {
         this.number = number;
     }
 
+    @ApiModelProperty("订单来源")
     public String getSource() {
         return source;
     }
