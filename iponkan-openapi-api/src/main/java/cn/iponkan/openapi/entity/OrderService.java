@@ -1,7 +1,9 @@
 package cn.iponkan.openapi.entity;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,4 +24,9 @@ public interface OrderService {
     @ResponseBody
     String post(@Valid @RequestBody OrderDto order) throws Exception;
 
+
+    @ApiOperation("获取订单，根据订单号")
+    @GetMapping("get")
+    @ResponseBody
+    OrderDto get(String number) throws Exception;
 }
